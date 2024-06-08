@@ -1,0 +1,74 @@
+[
+    {
+        "userId": 1,
+        "movieId": 1,
+        "score": 1,
+        "comment": "Too bad."
+    },
+    {
+        "userId": 1,
+        "movieId": 2,
+        "score": 2,
+        "comment": "Good."
+    },
+    {
+        "userId": 1,
+        "movieId": 3,
+        "score": 3,
+        "comment": "Okay."
+    },
+    {
+        "userId": 1,
+        "movieId": 4,
+        "score": 4,
+        "comment": "Very Good."
+    },
+    {
+        "userId": 2,
+        "movieId": 1,
+        "score": 2,
+        "comment": "Too bad."
+    },
+    {
+        "userId": 2,
+        "movieId": 2,
+        "score": 3,
+        "comment": "Good."
+    },
+    {
+        "userId": 2,
+        "movieId": 3,
+        "score": 4,
+        "comment": "Okay."
+    },
+    {
+        "userId": 2,
+        "movieId": 4,
+        "score": 5,
+        "comment": "Very Good."
+    },
+    {
+        "userId": 3,
+        "movieId": 1,
+        "score": 3,
+        "comment": "Too bad."
+    },
+    {
+        "userId": 3,
+        "movieId": 2,
+        "score": 1,
+        "comment": "Good."
+    },
+    {
+        "userId": 3,
+        "movieId": 3,
+        "score": 2,
+        "comment": "Okay."
+    },
+    {
+        "userId": 3,
+        "movieId": 4,
+        "score": 4,
+        "comment": "Very Good."
+    }
+]

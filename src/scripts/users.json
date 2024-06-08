@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Aaron",
+        "isAdmin": false
+    },
+    {
+        "name": "Bob",
+        "isAdmin": false
+    },
+    {
+        "name": "Charlie",
+        "isAdmin": false
+    },
+    {
+        "name": "Admin",
+        "isAdmin": true
+    }
+]

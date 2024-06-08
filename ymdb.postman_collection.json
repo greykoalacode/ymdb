@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "707d6888-83d3-4e6a-95a5-798b6c7e0f89",
+		"name": "ymdb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "10226487"
+	},
+	"item": [
+		{
+			"name": "movies",
+			"item": [
+				{
+					"name": "Get all movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3000/movies"
+					},
+					"response": []
+				},
+				{
+					"name": "Find movies by genre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/movies?genre=crime",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies"
+							],
+							"query": [
+								{
+									"key": "genre",
+									"value": "crime"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sort movie by rating",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/movies?sort=rating",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "rating"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add new movie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Movie name\",\r\n    \"description\": \"Story of how it starts and ends\",\r\n    \"genre\": \"Horror|Thriller\",\r\n    \"releaseDate\": \"2024-10-20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/movies"
+					},
+					"response": []
+				},
+				{
+					"name": "Update existing movie",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Story of how it ends and starts\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/movies/1001"
+					},
+					"response": []
+				},
+				{
+					"name": "Find by title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/movies?title=Super",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Super"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get upcoming movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3000/movies/upcoming"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"admin\",\r\n    \"isAdmin\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/users"
+					},
+					"response": []
+				},
+				{
+					"name": "Get users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3000/users"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rating",
+			"item": [
+				{
+					"name": "get all ratings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3000/ratings"
+					},
+					"response": []
+				},
+				{
+					"name": "add rating",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 1,\r\n    \"movieId\": 1,\r\n    \"score\": 2,\r\n    \"comment\": \"Not so good movie.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/ratings"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete all ratings",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:3000/ratings"
+					},
+					"response": []
+				},
+				{
+					"name": "Update rating",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"score\": 2,\r\n    \"comment\": \"Okayish one\",\r\n    \"userId\": 1,\r\n    \"movieId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/ratings/1"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
